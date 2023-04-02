@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Chat-typecript/static/css/main.88cf739b.css",
-    "main.js": "/Chat-typecript/static/js/main.0bad19cf.js",
-    "static/js/787.66cb4309.chunk.js": "/Chat-typecript/static/js/787.66cb4309.chunk.js",
-    "static/media/avatar.png": "/Chat-typecript/static/media/avatar.d947cb9d0d13765666b6.png",
-    "index.html": "/Chat-typecript/index.html",
-    "main.88cf739b.css.map": "/Chat-typecript/static/css/main.88cf739b.css.map",
-    "main.0bad19cf.js.map": "/Chat-typecript/static/js/main.0bad19cf.js.map",
-    "787.66cb4309.chunk.js.map": "/Chat-typecript/static/js/787.66cb4309.chunk.js.map"
+    "main.css": "/homework/static/css/main.88cf739b.css",
+    "main.js": "/homework/static/js/main.d7d78c92.js",
+    "static/js/787.66cb4309.chunk.js": "/homework/static/js/787.66cb4309.chunk.js",
+    "static/media/avatar.png": "/homework/static/media/avatar.d947cb9d0d13765666b6.png",
+    "index.html": "/homework/index.html",
+    "main.88cf739b.css.map": "/homework/static/css/main.88cf739b.css.map",
+    "main.d7d78c92.js.map": "/homework/static/js/main.d7d78c92.js.map",
+    "787.66cb4309.chunk.js.map": "/homework/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.88cf739b.css",
-    "static/js/main.0bad19cf.js"
+    "static/js/main.d7d78c92.js"
   ]
 }
