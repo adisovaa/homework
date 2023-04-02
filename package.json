@@ -2,7 +2,7 @@
   "name": "hws2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://adisovaa.github.io/Chat-typecript",
+  "homepage": "https://adisovaa.github.io/homework",
   "dependencies": {
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",
