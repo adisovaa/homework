@@ -34,23 +34,28 @@
 .button {
     width: 78px;
     height: 36px;
-    background: #0066CC;
-    opacity: 0.5;
+    border: 1px solid #0066CC;
     border-radius: 3px;
     color: #fff;
-    font-family: 'Montserrat';
+    background: #0066CC;
+    opacity: 1;
     font-weight: 600;
     font-size: 14px;
     margin-left: 12px;
 }
 
 .button:focus {
+    background: #0066CC;
+    opacity: 0.5;
 }
 
 .button:active {
+    background: #0066CC;
 }
 
 .button:disabled {
+    background: #0066CC;
+    opacity: 0.5;
 }
 
 .text {
