@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .App {
-    --header_height: 60px;
-    margin: 100px 100px auto;
+    /*--header_height: 60px;*/
+    /*margin: 0 100px auto;*/
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -16,4 +16,8 @@
     font-size: 22px;
     font-weight: bold;
     padding: 39px 0 10px;
+}
+
+.wrapper {
+    margin: 0 100px auto;
 }
