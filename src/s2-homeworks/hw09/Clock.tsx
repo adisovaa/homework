@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import {restoreState} from '../hw06/localStorage/localStorage'
 import s from './Clock.module.css'
@@ -11,38 +11,45 @@ function Clock() {
 
     const start = () => {
 
+        const newTimerId = +setInterval(() => {
+            setDate(new Date());
+        }, 1000);
+        setTimerId(newTimerId);
+
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
     }
-
     const stop = () => {
-        // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
-
+        if (timerId !== undefined) {
+            window.clearInterval(timerId)
+            setTimerId(undefined)
+        }
     }
     const onMouseEnter = () => { // пишут студенты // показать дату если наведена мышка
-
+        setShow(true)
     }
     const onMouseLeave = () => { // пишут студенты // спрятать дату если мышка не наведена
-
+        setShow(false)
     }
+
+    useEffect(() => {
+        return () => {
+            if (timerId !== undefined) {
+                window.clearInterval(timerId)
+            }
+        }
+    }, [timerId])
 
 
     const currentDate = new Date()
     const daysOfWeek = new Intl.DateTimeFormat("en-US", {weekday: "long"}).format(currentDate)
     const monthOfYear = new Intl.DateTimeFormat("en", {month: "long"}).format(currentDate)
 
-    const hours = currentDate.getHours();
-    const minutes = currentDate.getMinutes();
-    const seconds = currentDate.getSeconds();
-
     const formattedTime = [
-        hours.toString().padStart(2, '0'),
-        minutes.toString().padStart(2, '0'),
-        seconds.toString().padStart(2, '0')
+        currentDate.getHours().toString().padStart(2, '0'),
+        currentDate.getMinutes().toString().padStart(2, '0'),
+        currentDate.getSeconds().toString().padStart(2, '0')
     ].join(':');
-
-    console.log(currentDate)
-
 
     let formatter = new Intl.DateTimeFormat("ru", {
         year: "numeric",
@@ -50,9 +57,6 @@ function Clock() {
         day: "numeric",
         weekday: "long"
     }).format(date);
-
-    console.log(formatter);
-
 
     const stringTime = formattedTime || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
     const stringDate = formatter || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
@@ -94,14 +98,14 @@ function Clock() {
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={true} // пишут студенты // задизэйблить если таймер запущен
+                    disabled={!!timerId} // пишут студенты // задизэйблить если таймер запущен
                     onClick={start}
                 >
                     start
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={true} // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={!timerId} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
                 >
                     stop
