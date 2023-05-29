@@ -55,11 +55,14 @@ function Clock() {
         year: "numeric",
         month: "numeric",
         day: "numeric",
-        weekday: "long"
     }).format(date);
 
     const stringTime = formattedTime || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
     const stringDate = formatter || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
+
+    console.log(stringDate)
+    // понедельник, 29.05.2023 г.
+
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
     const stringDay = daysOfWeek || <br/> // пишут студенты
