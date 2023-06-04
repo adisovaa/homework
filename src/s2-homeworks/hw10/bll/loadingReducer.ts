@@ -8,7 +8,7 @@ export const loadingReducer = (state = initState, action: LoadingActionType): an
         case 'CHANGE_LOADING':
             return {
                 ...state,
-                isLoading: true
+                isLoading: !state.isLoading
             }
         default:
             return state
