@@ -19,3 +19,8 @@
 .more {
     padding: 20px 0;
 }
+
+.buttonsContainer#hw9-button-start{
+    width: 82px!important;
+    height: 30px!important;
+}
